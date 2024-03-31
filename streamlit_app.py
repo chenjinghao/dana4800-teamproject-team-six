@@ -11,10 +11,10 @@ with st.sidebar:
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
     st.header("Team Members")
-    st.markdown("- Ananta Arora (SID: 100421624)\
-                - Jinghao Chen (SID: 100406201)\
-                - Roxanne Alvarez (SID: 100405742)\
-                - Teshani Jayasinghe (SID: 100422405)")
+    st.markdown("- Ananta Arora \
+                - Jinghao Chen \
+                - Roxanne Alvarez \
+                - Teshani Jayasinghe")
 
 
 
