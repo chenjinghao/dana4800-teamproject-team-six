@@ -19,7 +19,7 @@ with st.sidebar:
     st.title("Section")
     st.header("Performance Comparision")
     st.subheader('Between Models')
-    num_features_option = st.selecbox('Select the number of features', [67,29])
+    num_features_option = st.selecbox('Select the number of features', ('67','29'))
     st.write('You selected:', num_features_option)
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
