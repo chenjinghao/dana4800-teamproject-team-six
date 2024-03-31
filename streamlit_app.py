@@ -17,7 +17,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Performance Comparision", "SHAP Analysis", "L
 with tab1:
    pc_tab1, pc_tab2 = st.tabs(['Between models', 'Within models'])
    with pc_tab1:
-    bm_num_twonine, bm_num_sixseven = st.tabs(["67 Features", "29 Features"])
+    bm_num_sixseven,bm_num_twonine = st.tabs(["67 Features", "29 Features"])
     with bm_num_sixseven:
         model_cp_all_data = {
             'Models': ['SVM', 'Random Forest', 'XGBoost'],
