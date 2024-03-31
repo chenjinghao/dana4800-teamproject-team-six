@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 st.title('DANA 4800 Team Project Phase 2')
-st.subheader('Interactive Dashboard:computer:', divider='rainbow')
+st.subheader('Interactive Dashboard:computer:')
 
 
 team_members = '''
