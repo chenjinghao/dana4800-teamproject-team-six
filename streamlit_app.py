@@ -2,13 +2,6 @@ import altair as alt
 import streamlit as st
 import pandas as pd
 
-option = st.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone"),
-    index=None,
-    placeholder="Select contact method...",
-)
-
 st.write("You selected:", option)
 
 model_cp_all_data = {
@@ -37,8 +30,7 @@ with st.sidebar:
     st.subheader('Between Models')
     num_features_option = st.selectbox(
         "Number of features", 
-        ("67","29"),
-        placeholder="Select the number of features",)
+        ("67","29"),)
     st.write(f'You selected: {num_features_option} features.' )
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
