@@ -15,9 +15,13 @@ team_members = '''
 tab1, tab2, tab3, tab4 = st.tabs(["Performance Comparision", "SHAP Analysis", "LIME Analysis", "Team Members"])
 
 with tab1:
-   st.header("A cat")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-
+   st.header("Performance Comparision")
+   pc_tab1, pc_tab2 = st.tabs(['Between models', 'Within models'])
+   with pc_tab1:
+    bm_num_twonine, bm_num_sixseven = st.tabs(["67 Features", "29 Features"])
+   with pc_tab2:
+    wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
+    
 with tab2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
