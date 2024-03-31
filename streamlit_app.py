@@ -2,8 +2,6 @@ import altair as alt
 import streamlit as st
 import pandas as pd
 
-st.write("You selected:", option)
-
 model_cp_all_data = {
     'Models': ['SVM', 'Random Forest', 'XGBoost'],
     'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
