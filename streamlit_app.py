@@ -1,12 +1,18 @@
 import altair as alt
 import streamlit as st
 import pandas as pd
+import os
 
-num_features_option = st.selectbox(
-        "Number of features", 
-        ("67","29"),
-        placeholder="Select the number of features")
-st.write(f'You selected: {num_features_option} features.' )
+# Everything is accessible via the st.secrets dict:
+st.write("DB username:", st.secrets["db_username"])
+st.write("DB password:", st.secrets["db_password"])
+st.write("My cool secrets:", st.secrets["cookies"]["games"])
+
+# And the root-level secrets are also accessible as environment variables:
+st.write(
+    "Has environment variables been set:",
+    os.environ["db_username"] == st.secrets["db_username"],
+)
 
 model_cp_all_data = {
     'Models': ['SVM', 'Random Forest', 'XGBoost'],
