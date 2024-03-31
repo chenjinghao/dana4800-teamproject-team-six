@@ -27,12 +27,7 @@ with tab1:
         st.dataframe(model_cp_all_df)
         st.image("image/pc/bw_sixseven.png")
         st.write("Classification Report")
-        data = {
-            'Metrics': ['Weighted Precision', 'Macro Precision', 'Weighted Recall', 'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score', 'Accuracy', 'ROC AUC'],
-            'SVC': [0.741185, 0.741185, 0.740769, 0.740769, 0.740657, 0.740657, None, None],
-            'RandomForestClassifier': [0.777772, 0.777772, 0.777692, 0.777692, 0.777676, 0.777676, None, None],
-            'XGBClassifier': [0.782603, 0.782603, 0.782308, 0.782308, 0.782251, None, None, None]}
-
+        data = {"MLA used":"SVC","Weighted Precision":0.7411853826,"Macro Precision":0.7411853826,"Weighted Recall":0.7407692308,"Macro Recall":0.7407692308,"Weighted F1 Score":0.7406573605,"Macro F1 Score":0.7406573605,"Accuracy":0.7407692308,"ROC_AUC":0.8211704142},{"MLA used":"RandomForestClassifier","Weighted Precision":0.7855799588,"Macro Precision":0.7855799588,"Weighted Recall":0.7853846154,"Macro Recall":0.7853846154,"Weighted F1 Score":0.7853479086,"Macro F1 Score":0.7853479086,"Accuracy":0.7853846154,"ROC_AUC":0.8605136095},{"MLA used":"XGBClassifier","Weighted Precision":0.7826026693,"Macro Precision":0.7826026693,"Weighted Recall":0.7823076923,"Macro Recall":0.7823076923,"Weighted F1 Score":0.7822508714,"Macro F1 Score":0.7822508714,"Accuracy":0.7823076923,"ROC_AUC":0.8589798817}
         # Create the DataFrame
         df = pd.DataFrame(data)
 
@@ -40,10 +35,10 @@ with tab1:
         df.set_index('Metrics', inplace=True)
 
         # Transpose the DataFrame
-        df = df.T
+        df = df.transpose
         st.dataframe(df)
         st.write("ROC curve")
-        st.image("image\pc\bw_sixseven_roc.png")
+        st.image("image/pc/bw_sixseven_roc.png")
 
    with pc_tab2:
     wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
