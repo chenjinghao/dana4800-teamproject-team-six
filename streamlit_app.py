@@ -63,16 +63,32 @@ with tab1:
    with pc_tab2:
     xgboost,randomforest,svc = st.tabs(["XGBoost", "RandomForest", "SVC"])
     with xgboost:
-        model_cp_all_data = {
-            'Models': ['SVM', 'Random Forest', 'XGBoost'],
-            'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
-            'Std': [0.030066, 0.018957, 0.015806]}
-        model_cp_all_df = pd.DataFrame(model_cp_all_data)
-        st.dataframe(model_cp_all_df)
-        st.image("image/pc/bw_sixseven.png")
+        model_cp_xgb_data = {
+            'Models': ['All Features', '29 Features'],
+            'Cross Val Score (mean)': [0.777210, 0.786471],
+            'Std': [0.026401, 0.023387]
+}
+        model_cp_xgb_df = pd.DataFrame(model_cp_xgb_data)
+        st.dataframe(model_cp_xgb_df)
+        st.image("image/pc/wm_xgboost.png")
         st.write("Classification Report")
-        data = {"MLA used":"SVC","Weighted Precision":0.7411853826,"Macro Precision":0.7411853826,"Weighted Recall":0.7407692308,"Macro Recall":0.7407692308,"Weighted F1 Score":0.7406573605,"Macro F1 Score":0.7406573605,"Accuracy":0.7407692308,"ROC_AUC":0.8211704142},{"MLA used":"RandomForestClassifier","Weighted Precision":0.7855799588,"Macro Precision":0.7855799588,"Weighted Recall":0.7853846154,"Macro Recall":0.7853846154,"Weighted F1 Score":0.7853479086,"Macro F1 Score":0.7853479086,"Accuracy":0.7853846154,"ROC_AUC":0.8605136095},{"MLA used":"XGBClassifier","Weighted Precision":0.7826026693,"Macro Precision":0.7826026693,"Weighted Recall":0.7823076923,"Macro Recall":0.7823076923,"Weighted F1 Score":0.7822508714,"Macro F1 Score":0.7822508714,"Accuracy":0.7823076923,"ROC_AUC":0.8589798817}
-        # Create the DataFrame
+        data = {
+    'Feature': [
+        'Weighted Precision', 'Macro Precision', 'Weighted Recall', 
+        'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score', 
+        'Accuracy', 'ROC_AUC'
+    ],
+    'All Features': [
+        0.782602669, 0.782602669, 0.782307692, 
+        0.782307692, 0.782250871, 0.782250871, 
+        0.782307692, 0.858979882
+    ],
+    '29 Features': [
+        0.756227227, 0.756227227, 0.756153846, 
+        0.756153846, 0.756136386, 0.756136386, 
+        0.756153846, 0.832643787
+    ]
+}        # Create the DataFrame
         df = pd.DataFrame(data)
 
         # Set the 'Metrics' column as the index
@@ -82,7 +98,7 @@ with tab1:
         df = df.transpose()
         st.dataframe(df)
         st.write("ROC curve")
-        st.image("image/pc/bw_sixseven_roc.png")
+        st.image("image/pc/wm_xgboost_roc.png")
     with randomforest:
         model_cp_twonine_data = {
             'Models': ['SVM', 'Random Forest', 'XGBoost'],
