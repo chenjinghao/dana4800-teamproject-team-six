@@ -32,8 +32,7 @@ with st.sidebar:
     #     index=None,
     #     placeholder="Select num of features",)
     # st.write(f'You selected: {num_features_option} features.' )
-    option = st.selectbox(
-        "How would you like to be contacted?",
+    option = st.selectbox("How would you like to be contacted?",
         ("Email", "Home phone", "Mobile phone"),
         index=None,
         placeholder="Select contact method...",)
