@@ -15,13 +15,18 @@ team_members = '''
 tab1, tab2, tab3, tab4 = st.tabs(["Performance Comparision", "SHAP Analysis", "LIME Analysis", "Team Members"])
 
 with tab1:
-   st.header("Performance Comparision")
    pc_tab1, pc_tab2 = st.tabs(['Between models', 'Within models'])
    with pc_tab1:
     bm_num_twonine, bm_num_sixseven = st.tabs(["67 Features", "29 Features"])
+    with bm_num_sixseven:
+        model_cp_all_data = {
+            'Models': ['SVM', 'Random Forest', 'XGBoost'],
+            'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
+            'Std': [0.030066, 0.018957, 0.015806]}
+        model_cp_all_df = pd.DataFrame(model_cp_all_data)
    with pc_tab2:
     wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
-    
+
 with tab2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
@@ -36,12 +41,7 @@ with tab4:
 
 
 
-# model_cp_all_data = {
-#     'Models': ['SVM', 'Random Forest', 'XGBoost'],
-#     'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
-#     'Std': [0.030066, 0.018957, 0.015806]
-# }
-# model_cp_all_df = pd.DataFrame(model_cp_all_data)
+
 
 
 
