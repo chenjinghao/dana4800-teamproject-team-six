@@ -14,8 +14,6 @@ team_members = '''
 
 tab1, tab2, tab3, tab4 = st.tabs(["Performance Comparision", "SHAP Analysis", "LIME Analysis", "Team Members"])
 
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
-
 with tab1:
    st.header("A cat")
    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
