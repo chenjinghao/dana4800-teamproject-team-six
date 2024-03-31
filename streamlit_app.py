@@ -2,6 +2,14 @@ import altair as alt
 import streamlit as st
 import pandas as pd
 
+option = st.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone"),
+    index=None,
+    placeholder="Select contact method...",
+)
+
+st.write("You selected:", option)
 
 model_cp_all_data = {
     'Models': ['SVM', 'Random Forest', 'XGBoost'],
