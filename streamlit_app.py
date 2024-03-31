@@ -99,26 +99,34 @@ with tab1:
         st.write("ROC curve")
         st.image("image/pc/wm_xgboost_roc.png")
     with randomforest:
-        model_cp_twonine_data = {
-            'Models': ['SVM', 'Random Forest', 'XGBoost'],
-            'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
-            'Std': [0.030066, 0.018957, 0.015806]}
-        model_cp_twonine_df = pd.DataFrame(model_cp_twonine_data)
-        st.dataframe(model_cp_twonine_df)
-        st.image("image/pc/bw_twonine.png")
+        model_cp_rf_data = {
+            'Models': ['All Features', '29 Features'],
+            'Cross Val Score (mean)': [0.775211, 0.775865],
+            'Std': [0.019693, 0.017377]}
+        model_cp_rf_df = pd.DataFrame(model_cp_rf_data)
+        st.dataframe(model_cp_rf_df)
+        st.image("image/pc/wm_rf.png")
         st.write("Classification Report")
-        data = {"MLA used":"RandomForestClassifier","Train Accuracy":1.0,"Test Accuracy":0.7685,"Weighted Precision":0.7684774247,"Macro Precision":0.7684774247,"Weighted Recall":0.7684615385,"Macro Recall":0.7684615385,"Weighted F1 Score":0.7684581133,"Macro F1 Score":0.7684581133,"Accuracy":0.7684615385,"ROC_AUC":0.8479491124},{"MLA used":"XGBClassifier","Train Accuracy":1.0,"Test Accuracy":0.7562,"Weighted Precision":0.7562272272,"Macro Precision":0.7562272272,"Weighted Recall":0.7561538462,"Macro Recall":0.7561538462,"Weighted F1 Score":0.7561363861,"Macro F1 Score":0.7561363861,"Accuracy":0.7561538462,"ROC_AUC":0.832643787},{"MLA used":"SVC","Train Accuracy":0.7407,"Test Accuracy":0.75,"Weighted Precision":0.7507269598,"Macro Precision":0.7507269598,"Weighted Recall":0.75,"Macro Recall":0.75,"Weighted F1 Score":0.7498186555,"Macro F1 Score":0.7498186555,"Accuracy":0.75,"ROC_AUC":0.8258721893}
-        # Create the DataFrame
+        data = {
+            'Feature': ['Weighted Precision', 'Macro Precision', 'Weighted Recall', 
+                        'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score',
+                        'Accuracy', 'ROC_AUC'],
+            'All Features': [0.776965031, 0.776965031, 0.776923077, 
+                            0.776923077, 0.776914629, 0.776914629,
+                            0.776923077, 0.858069822],
+            '29 Features': [0.769271558, 0.769271558, 0.769230769,
+                            0.769230769, 0.76922203, 0.76922203,
+                            0.769230769, 0.849074556]
+        }        # Create the DataFrame
         df = pd.DataFrame(data)
 
         # Set the 'Metrics' column as the index
-        df.set_index('MLA used', inplace=True)
+        df.set_index('Feature', inplace=True)
         
         # Transpose the DataFrame
-        df = df.transpose()
         st.dataframe(df)
         st.write("ROC curve")
-        st.image("image/pc/bw_twonine_roc.png")
+        st.image("image\pc\wm_rf_roc.png")
     with svc:
         st.write('updating')
 with tab2:
