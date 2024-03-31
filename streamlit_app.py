@@ -126,16 +126,15 @@ with tab1:
         # Transpose the DataFrame
         st.dataframe(df)
         st.write("ROC curve")
-        st.image("image\pc\wm_rf_roc.png")
+        st.image("image/pc/wm_rf_roc.png")
     with svc:
         model_cp_svc_data = {
             'Models': ['All Features', '29 Features'],
             'Cross Val Score (mean)': [0.731407, 0.731099],
-            'Std': [0.023415, 0.022104]
-}
+            'Std': [0.023415, 0.022104]}
         model_cp_svc_df = pd.DataFrame(model_cp_svc_data)
         st.dataframe(model_cp_rf_df)
-        st.image("image\pc\wm_svc.png")
+        st.image("image/pc/wm_svc.png")
         st.write("Classification Report")
         data = {
             'Feature': ['Weighted Precision', 'Macro Precision', 'Weighted Recall', 
@@ -145,8 +144,7 @@ with tab1:
                             0.740769231, 0.74065736, 0.74065736,
                             0.740769231, 0.821170414],
             '29 Features': [0.75072696, 0.75072696, 0.75, 0.75,
-                            0.749818656, 0.749818656, 0.75 , 0.825887574]
-}
+                            0.749818656, 0.749818656, 0.75 , 0.825887574]}
         df = pd.DataFrame(data)
 
         # Set the 'Metrics' column as the index
@@ -155,7 +153,7 @@ with tab1:
         # Transpose the DataFrame
         st.dataframe(df)
         st.write("ROC curve")
-        st.image("image\pc\wm_svc_roc.png")
+        st.image("image/pc/wm_svc_roc.png")
 with tab2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
