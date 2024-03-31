@@ -155,12 +155,18 @@ with tab1:
         st.write("ROC curve")
         st.image("image/pc/wm_svc_roc.png")
 with tab2:
-   st.header("A dog")
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
-
+   ft_imp, ft_sixseven, ft_twonine = st.tabs(["Feature Important", "67 Features", "29 Features"])
+   with ft_imp:
+    col1, col2 = st.columns(3)
+    with col1:
+        st.header("Feature Important - 67 Features")
+        st.image("image/pc/ft_67.png")
+    with col2:
+        st.header("Feature Important - 29 Features")
+        st.image("image/pc/ft_29.png")
 with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    st.header("An owl")
+    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
 with tab4:
     st.header("Team Members")
