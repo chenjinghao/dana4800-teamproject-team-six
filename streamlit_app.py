@@ -95,7 +95,6 @@ with tab1:
         df.set_index('Feature', inplace=True)
         
         # Transpose the DataFrame
-        df = df.transpose()
         st.dataframe(df)
         st.write("ROC curve")
         st.image("image/pc/wm_xgboost_roc.png")
