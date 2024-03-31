@@ -33,8 +33,7 @@ with st.sidebar:
     #     placeholder="Select num of features",)
     # st.write(f'You selected: {num_features_option} features.' )
     option = st.selectbox("How would you like to be contacted?",
-        ("Email", "Home phone", "Mobile phone"),
-        placeholder="Select contact method...",)
+        ("Email", "Home phone", "Mobile phone"),)
 
     st.write('You selected:', option)
     st.header("SHAP Analysis")
