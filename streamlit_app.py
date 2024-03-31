@@ -92,7 +92,7 @@ with tab1:
         df = pd.DataFrame(data)
 
         # Set the 'Metrics' column as the index
-        df.set_index('MLA used', inplace=True)
+        df.set_index('Feature', inplace=True)
         
         # Transpose the DataFrame
         df = df.transpose()
