@@ -26,6 +26,25 @@ with tab1:
         model_cp_all_df = pd.DataFrame(model_cp_all_data)
         st.dataframe(model_cp_all_df)
         st.image("image/pc/bw_sixseven.png")
+        st.write("Classification Report")
+        data = {
+            'Metrics': ['Weighted Precision', 'Macro Precision', 'Weighted Recall', 'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score', 'Accuracy', 'ROC AUC'],
+            'SVC': [0.741185, 0.741185, 0.740769, 0.740769, 0.740657, 0.740657, None, None],
+            'RandomForestClassifier': [0.777772, 0.777772, 0.777692, 0.777692, 0.777676, 0.777676, None, None],
+            'XGBClassifier': [0.782603, 0.782603, 0.782308, 0.782308, 0.782251, None, None, None]}
+
+        # Create the DataFrame
+        df = pd.DataFrame(data)
+
+        # Set the 'Metrics' column as the index
+        df.set_index('Metrics', inplace=True)
+
+        # Transpose the DataFrame
+        df = df.T
+        st.dataframe(df)
+        st.write("ROC curve")
+        st.image("image\pc\bw_sixseven_roc.png")
+
    with pc_tab2:
     wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
 
