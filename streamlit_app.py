@@ -10,7 +10,6 @@ team_members = '''<ul>
   <li>Teshani Jayasinghe</li>
 </ul>'''
 
-Ananta Arora, Jinghao Chen, Roxanne Alvarez, Teshani Jayasinghe"
 # Using "with" notation
 with st.sidebar:
     st.title("Section")
