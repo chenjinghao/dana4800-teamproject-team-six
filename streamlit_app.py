@@ -17,14 +17,11 @@ team_members = '''
 # Using "with" notation
 with st.sidebar:
     st.title("Section")
-    
+
     st.header("Performance Comparision")
     st.subheader('Between Models')
     num_features_option = st.selectbox('Select the number of features', ('67','29'))
     st.write('You selected:', num_features_option)
-
-
-    st.write('You selected:', option)
 
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
