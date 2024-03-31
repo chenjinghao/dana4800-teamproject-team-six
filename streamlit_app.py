@@ -39,7 +39,27 @@ with tab1:
         st.dataframe(df)
         st.write("ROC curve")
         st.image("image/pc/bw_sixseven_roc.png")
+    with bm_num_twonine:
+        model_cp_twonine_data = {
+            'Models': ['SVM', 'Random Forest', 'XGBoost'],
+            'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
+            'Std': [0.030066, 0.018957, 0.015806]}
+        model_cp_twonine_df = pd.DataFrame(model_cp_twonine_data)
+        st.dataframe(model_cp_twonine_df)
+        st.image("image/pc/bw_twonine.png")
+        st.write("Classification Report")
+        data = {"MLA used":"RandomForestClassifier","Train Accuracy":1.0,"Test Accuracy":0.7685,"Weighted Precision":0.7684774247,"Macro Precision":0.7684774247,"Weighted Recall":0.7684615385,"Macro Recall":0.7684615385,"Weighted F1 Score":0.7684581133,"Macro F1 Score":0.7684581133,"Accuracy":0.7684615385,"ROC_AUC":0.8479491124},{"MLA used":"XGBClassifier","Train Accuracy":1.0,"Test Accuracy":0.7562,"Weighted Precision":0.7562272272,"Macro Precision":0.7562272272,"Weighted Recall":0.7561538462,"Macro Recall":0.7561538462,"Weighted F1 Score":0.7561363861,"Macro F1 Score":0.7561363861,"Accuracy":0.7561538462,"ROC_AUC":0.832643787},{"MLA used":"SVC","Train Accuracy":0.7407,"Test Accuracy":0.75,"Weighted Precision":0.7507269598,"Macro Precision":0.7507269598,"Weighted Recall":0.75,"Macro Recall":0.75,"Weighted F1 Score":0.7498186555,"Macro F1 Score":0.7498186555,"Accuracy":0.75,"ROC_AUC":0.8258721893}
+        # Create the DataFrame
+        df = pd.DataFrame(data)
 
+        # Set the 'Metrics' column as the index
+        df.set_index('MLA used', inplace=True)
+        
+        # Transpose the DataFrame
+        df = df.transpose()
+        st.dataframe(df)
+        st.write("ROC curve")
+        st.image("image/pc/bw_twonine_roc.png")
    with pc_tab2:
     wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
 
