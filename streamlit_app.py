@@ -2,6 +2,12 @@ import altair as alt
 import streamlit as st
 import pandas as pd
 
+num_features_option = st.selectbox(
+        "Number of features", 
+        ("67","29"),
+        placeholder="Select the number of features")
+st.write(f'You selected: {num_features_option} features.' )
+
 model_cp_all_data = {
     'Models': ['SVM', 'Random Forest', 'XGBoost'],
     'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
@@ -38,8 +44,3 @@ with st.sidebar:
 
 
 
-    num_features_option = st.selectbox(
-        "Number of features", 
-        ("67","29"),
-        placeholder="Select the number of features")
-    st.write(f'You selected: {num_features_option} features.' )
