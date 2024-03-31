@@ -24,6 +24,7 @@ with tab1:
             'Cross Val Score (mean)': [0.732416, 0.772202, 0.775205],
             'Std': [0.030066, 0.018957, 0.015806]}
         model_cp_all_df = pd.DataFrame(model_cp_all_data)
+        st.dataframe(model_cp_all_df)
    with pc_tab2:
     wm_num_twonine, wm_num_sixseven = st.tabs(["67 Features", "29 Features"])
 
@@ -45,7 +46,7 @@ with tab4:
 
 
 
-# st.dataframe(model_cp_all_df)
+
 
 
 
