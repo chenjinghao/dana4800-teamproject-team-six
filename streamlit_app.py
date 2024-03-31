@@ -73,22 +73,22 @@ with tab1:
         st.image("image/pc/wm_xgboost.png")
         st.write("Classification Report")
         data = {
-    'Feature': [
-        'Weighted Precision', 'Macro Precision', 'Weighted Recall', 
-        'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score', 
-        'Accuracy', 'ROC_AUC'
-    ],
-    'All Features': [
-        0.782602669, 0.782602669, 0.782307692, 
-        0.782307692, 0.782250871, 0.782250871, 
-        0.782307692, 0.858979882
-    ],
-    '29 Features': [
-        0.756227227, 0.756227227, 0.756153846, 
-        0.756153846, 0.756136386, 0.756136386, 
-        0.756153846, 0.832643787
-    ]
-}        # Create the DataFrame
+            'Feature': [
+                'Weighted Precision', 'Macro Precision', 'Weighted Recall', 
+                'Macro Recall', 'Weighted F1 Score', 'Macro F1 Score', 
+                'Accuracy', 'ROC_AUC'
+            ],
+            'All Features': [
+                0.782602669, 0.782602669, 0.782307692, 
+                0.782307692, 0.782250871, 0.782250871, 
+                0.782307692, 0.858979882
+            ],
+            '29 Features': [
+                0.756227227, 0.756227227, 0.756153846, 
+                0.756153846, 0.756136386, 0.756136386, 
+                0.756153846, 0.832643787
+            ]}        
+        # Create the DataFrame
         df = pd.DataFrame(data)
 
         # Set the 'Metrics' column as the index
