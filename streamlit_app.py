@@ -2,9 +2,8 @@ import altair as alt
 import streamlit as st
 import pandas as pd
 
-st.title('DANA 4800 Team Project Phase 2',
-         divider='rainbow')
-st.subheader('Interactive Dashboard:computer:')
+st.title('DANA 4800 Team Project Phase 2')
+st.subheader('Interactive Dashboard:computer:', divider='rainbow')
 
 
 team_members = '''
