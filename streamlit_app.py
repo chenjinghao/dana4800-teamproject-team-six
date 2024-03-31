@@ -33,9 +33,9 @@ with tab1:
 
         # Set the 'Metrics' column as the index
         df.set_index('MLA used', inplace=True)
-
+        
         # Transpose the DataFrame
-        df = df.transpose
+        df = df.transpose()
         st.dataframe(df)
         st.write("ROC curve")
         st.image("image/pc/bw_sixseven_roc.png")
