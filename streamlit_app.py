@@ -7,7 +7,7 @@ import streamlit as st
 # DANA 4800 Team Project Phase 2
 ## Team 6
 """
-st.sidebar.[Selection]
+st.sidebar.['Selection']
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
