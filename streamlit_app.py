@@ -4,9 +4,10 @@ import streamlit as st
 st.title('DANA 4800 Team Project Phase 2')
 
 team_members = '''
-- **Team 1**:
-    - **Name**: A
-    - **Email**:'''
+- **Ananta Arora**
+- **Jinghao Chen**
+- **Roxanne Alvarez**
+- **Teshani Jayasinghe**'''
 
 # Using "with" notation
 with st.sidebar:
