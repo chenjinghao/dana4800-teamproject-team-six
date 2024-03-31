@@ -157,7 +157,7 @@ with tab1:
 with tab2:
    ft_imp, ft_sixseven, ft_twonine = st.tabs(["Feature Important", "67 Features", "29 Features"])
    with ft_imp:
-    col1, col2 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
         st.header("Feature Important - 67 Features")
         st.image("image/pc/ft_67.png")
