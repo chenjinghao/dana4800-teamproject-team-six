@@ -26,12 +26,19 @@ with st.sidebar:
 
     st.header("Performance Comparision")
     st.subheader('Between Models')
-    num_features_option = st.selectbox(
-        "Select the number of features", 
-        ("67","29"),
+    # num_features_option = st.selectbox(
+    #     "Select the number of features", 
+    #     ("67","29"),
+    #     index=None,
+    #     placeholder="Select num of features",)
+    # st.write(f'You selected: {num_features_option} features.' )
+    option = st.selectbox(
+        "How would you like to be contacted?",
+        ("Email", "Home phone", "Mobile phone"),
         index=None,
-        placeholder="Select num of features",)
-    st.write(f'You selected: {num_features_option} features.' )
+        placeholder="Select contact method...",)
+
+    st.write('You selected:', option)
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
     st.header("Team Members")
