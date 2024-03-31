@@ -35,7 +35,7 @@ with tab1:
         df.set_index('Metrics', inplace=True)
 
         # Transpose the DataFrame
-        df = df.transpose
+        # df = df.transpose
         st.dataframe(df)
         st.write("ROC curve")
         st.image("image/pc/bw_sixseven_roc.png")
