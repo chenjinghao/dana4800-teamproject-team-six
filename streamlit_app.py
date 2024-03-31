@@ -38,3 +38,8 @@ with st.sidebar:
 
 
 
+    num_features_option = st.selectbox(
+        "Number of features", 
+        ("67","29"),
+        placeholder="Select the number of features")
+    st.write(f'You selected: {num_features_option} features.' )
