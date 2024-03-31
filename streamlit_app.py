@@ -4,6 +4,7 @@ import pandas as pd
 
 st.title('DANA 4800 Team Project Phase 2')
 st.subheader('Interactive Dashboard:computer:')
+st.divider()
 
 
 team_members = '''
