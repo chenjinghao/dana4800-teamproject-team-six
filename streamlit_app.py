@@ -28,7 +28,7 @@ with st.sidebar:
     st.subheader('Between Models')
     num_features_option = st.selectbox(
         "Number of features", 
-        ("67","29"),placeholder=True)
+        ("67","29"),placeholder="Pick")
     st.write(f'You selected: {num_features_option} features.' )
     st.header("SHAP Analysis")
     st.header("LIME Analysis")
