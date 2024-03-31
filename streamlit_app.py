@@ -12,7 +12,7 @@ model_cp_all_df = pd.DataFrame(model_cp_all_data)
 
 st.title('DANA 4800 Team Project Phase 2')
 st.subheader('Interactive Dashboard:computer:')
-st.dataframe(model_cp_all_df, use_container_width=True)
+st.dataframe(model_cp_all_df)
 
 team_members = '''
 - **Ananta Arora**
