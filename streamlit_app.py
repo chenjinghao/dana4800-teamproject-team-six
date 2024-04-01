@@ -12,7 +12,7 @@ team_members = '''
 - **Roxanne Alvarez**
 - **Teshani Jayasinghe**'''
 
-tab1, tab2, tab3, tab4 = st.tabs(["Performance Comparision", "SHAP Analysis", "LIME Analysis", "Team Members"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Performance Comparision", "SHAP Analysis", "LIME Analysis", "Permutation Feature Analysis","Team Members"])
 
 with tab1:
    pc_tab1, pc_tab2 = st.tabs(['Between models', 'Within models'])
@@ -246,5 +246,12 @@ with tab3:
             st.image("lime29fn.png")
 
 with tab4:
+    prem_67, prem_29 = st.tabs(['67 Features', '20 Features'])
+    with prem_67:
+        st.image("prem_feature_important_67.png")
+    with prem_29:
+        st.image("prem_feature_important_29.png")
+
+with tab5:
     st.header("Team Members")
     st.markdown(team_members)
