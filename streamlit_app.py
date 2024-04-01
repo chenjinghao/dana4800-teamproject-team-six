@@ -213,37 +213,38 @@ with tab2:
         with f_cluster:
             st.image("shap29f_clustering.png")
 with tab3:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   ft_sixseven, ft_twonine = st.tabs(["67 Features", "29 Features"])
+   with ft_sixseven:
+        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+            "True Positive", 
+            "False Positive", 
+            "True Negative", 
+            "False Negative"
+            ])
+        with tp:
+            st.image("lime67tp.png")
+        with fp:
+            st.image("lime67fp.png")
+        with tn:
+            st.image("lime67tn.png")
+        with fn:
+            st.image("lime67fn.png")
+   with ft_twonine:
+        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+            "True Positive", 
+            "False Positive", 
+            "True Negative", 
+            "False Negative"
+            ])
+        with tp:
+            st.image("lime29tp.png")
+        with fp:
+            st.image("lime29fp.png")
+        with tn:
+            st.image("lime29tn.png")
+        with fn:
+            st.image("lime29fn.png")
 
 with tab4:
     st.header("Team Members")
     st.markdown(team_members)
-
-
-
-
-
-
-
-
-
-
-
-# # Using "with" notation
-# with st.sidebar:
-#     st.title("Section")
-
-#     st.header("Performance Comparision")
-#     st.subheader('Between Models')
-#     num_features_option = st.selectbox(
-#         "Number of features", 
-#         ("67","29"), placeholder="Pick")
-#     st.write(f'You selected: {num_features_option} features.' )
-#     st.header("SHAP Analysis")
-#     st.header("LIME Analysis")
-#     st.header("Team Members")
-#     st.markdown(team_members)
-
-
-
