@@ -157,13 +157,61 @@ with tab1:
 with tab2:
    ft_imp, ft_sixseven, ft_twonine = st.tabs(["Feature Important", "67 Features", "29 Features"])
    with ft_imp:
-    col1, col2 = st.columns(2)
-    with col1:
-        st.header("Feature Important - 67 Features")
-        st.image("image/pc/ft_67.png")
-    with col2:
-        st.header("Feature Important - 29 Features")
-        st.image("image/pc/ft_29.png")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.header("67 Features")
+            st.image("image/pc/ft_67.png")
+        with col2:
+            st.header("29 Features")
+            st.image("image/pc/ft_29.png")
+   with ft_sixseven:
+        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+            "True Positive", 
+            "False Positive", 
+            "True Negative", 
+            "False Negative", 
+            "Heat Map Matrix", 
+            "Bee Swarm Plot",
+            "Feature Clustering"
+            ])
+        with tp:
+            st.image("shap67tp.png")
+        with fp:
+            st.image("shap67fp.png")
+        with tn:
+            st.image("shap67tn.png")
+        with fn:
+            st.image("shap67fn.png")
+        with heatm:
+            st.image("shap67heatm.png")
+        with bees:
+            st.image("shap67bees.png")
+        with f_cluster:
+            st.image("shap67f_clustering.png")
+   with ft_twonine:
+        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+            "True Positive", 
+            "False Positive", 
+            "True Negative", 
+            "False Negative", 
+            "Heat Map Matrix", 
+            "Bee Swarm Plot",
+            "Feature Clustering"
+            ])
+        with tp:
+            st.image("shap29tp.png")
+        with fp:
+            st.image("shap29fp.png")
+        with tn:
+            st.image("shap29tn.png")
+        with fn:
+            st.image("shap29fn.png")
+        with heatm:
+            st.image("shap29heatm.png")
+        with bees:
+            st.image("shap29bees.png")
+        with f_cluster:
+            st.image("shap29f_clustering.png")
 with tab3:
     st.header("An owl")
     st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
