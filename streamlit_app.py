@@ -215,7 +215,7 @@ with tab2:
 with tab3:
    ft_sixseven, ft_twonine = st.tabs(["67 Features", "29 Features"])
    with ft_sixseven:
-        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+        tp, fp, tn, fn= st.tabs([
             "True Positive", 
             "False Positive", 
             "True Negative", 
@@ -230,7 +230,7 @@ with tab3:
         with fn:
             st.image("lime67fn.png")
    with ft_twonine:
-        tp, fp, tn, fn, heatm, bees, f_cluster = st.tabs([
+        tp, fp, tn, fn = st.tabs([
             "True Positive", 
             "False Positive", 
             "True Negative", 
