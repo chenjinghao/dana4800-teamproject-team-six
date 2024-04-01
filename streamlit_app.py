@@ -246,7 +246,7 @@ with tab3:
             st.image("lime29fn.png")
 
 with tab4:
-    prem_67, prem_29 = st.tabs(['67 Features', '20 Features'])
+    prem_67, prem_29 = st.tabs(['67 Features', '29 Features'])
     with prem_67:
         st.image("prem_feature_important_67.png")
     with prem_29:
